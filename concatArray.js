@@ -1,18 +1,26 @@
-const { template } = require('@babel/core')
+//const { template } = require('@babel/core')
 
 function concatArray(array1, array2) {
-  //code here
-  // array1=[5, 10, 15]
-  // array2=[2, 4, 6, 7]
-  if(array1 && array2 == null || undefined){
+
+  if(array1 && array2== null || undefined){
     return undefined
   }else if (array1 && array2 == []){
     return []
-  }else if(array1 || array2 ==[] || null || undefined){
-    return array1.length + array2.length
+  }else if(array1|| array2==[] || null || undefined){
+    return array1 = array1.concat(array2)
   }
-
-  return concatArray(array1, array2)
+  
+  
 }
+console.log(concatArray([5, 10, 15], [2, 4, 6, 7]))
+console.log(concatArray([ ], ['item1', 'item2', 'item3']) )
+console.log(concatArray([10, 6, 5], []) )
+console.log(concatArray([], []) )
+console.log(concatArray(undefined, [2, 4, 6, 7]) )
+console.log(concatArray([2, 4, 6, 7], null) )
+console.log(concatArray(undefined, undefined) )
+console.log(concatArray(null, undefined) )
+console.log(concatArray(undefined, null) )
+console.log(concatArray(null, null) )
 
-module.exports = concatArray
+//module.exports = concatArray
