@@ -1,9 +1,9 @@
-// const { template } = require('@babel/core')
+ const { template } = require('@babel/core')
 
 function concatArray(array1, array2) {
 
 
-  if (array1 === null || undefined && array2 === null|| undefined ) {
+  if ((array1 == null || array1 == undefined) && (array2 == null|| array2 == undefined )) {
     return undefined
 
   } else if (array1 == [] && array2 == []) {
@@ -12,11 +12,11 @@ function concatArray(array1, array2) {
   } else if (array1 == [] || array1==null || array1==undefined) {
     return array2
 
-  } else if (array2 == [] || array2 == null || array2 == undefined) {
+  } else if (array2 == [] || array2 == null || array2 ==undefined) {
     return array1
 
   } else {
-    return array1=array1.concat(array2)
+    return array1.concat(array2)
   }
 }
 
@@ -26,11 +26,11 @@ function concatArray(array1, array2) {
 // console.log(concatArray([], ['item1', 'item2', 'item3']))
 // console.log(concatArray([10, 6, 5], []))
 // console.log(concatArray([], []))
-console.log(concatArray(undefined, [2, 4, 6, 7]))
+// console.log(concatArray(undefined, [2, 4, 6, 7]))
 // console.log(concatArray([2, 4, 6, 7], null))
 // console.log(concatArray(undefined, undefined))
 // console.log(concatArray(null, undefined))
 // console.log(concatArray(undefined, null))
 // console.log(concatArray(null, null))
 
-//module.exports = concatArray
+module.exports = concatArray
