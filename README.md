@@ -11,8 +11,16 @@
   2. concatArray([ ], ['item1', 'item2', 'item3’]) return [ 'item1', 'item2', 'item3' ]
   3. concatArray([10, 6, 5], []) return [ 10, 6, 5 ]
   4. concatArray([], []) return []
+
+
+
   5. concatArray(undefined, [2, 4, 6, 7]) return [2, 4, 6, 7]
   6. concatArray([2, 4, 6, 7], null) return [2, 4, 6, 7]
+
+
+
+
+  
   7. concatArray(undefined, undefined) return undefined
   8. concatArray(null, undefined) return undefined
   9. concatArray(undefined, null) return undefined
